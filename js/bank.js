@@ -48,8 +48,13 @@ document.getElementById('withdrow-btn').addEventListener('click',function(){
    
    // for balance start
    var prebalance = getoutputvalue('update-balance')
-   var currentbalance = prebalance - Newvalue ;
-   setvalue('update-balance',currentbalance)
+   if(Newvalue <= 1200)
+  {
+    var currentbalance = prebalance - Newvalue ;
+    setvalue('update-balance',currentbalance)
+  }else{
+    alert('you cannot withrdraw')
+  }
    // balance end
      
    })
